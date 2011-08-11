@@ -18,6 +18,9 @@
 		3F912BC113F40DE900853015 /* JONTUBusRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BB713F40DE800853015 /* JONTUBusRoute.m */; };
 		3F912BC213F40DE900853015 /* JONTUBusStop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BB813F40DE800853015 /* JONTUBusStop.h */; };
 		3F912BC313F40DE900853015 /* JONTUBusStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BB913F40DE800853015 /* JONTUBusStop.m */; };
+		3F912BD413F4111C00853015 /* NTU_TVY_TraversityDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BD213F4111C00853015 /* NTU_TVY_TraversityDelegate.h */; };
+		3F912BD513F4111C00853015 /* NTU_TVY_TraversityDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BD313F4111C00853015 /* NTU_TVY_TraversityDelegate.m */; };
+		3F912BD713F4115700853015 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F912BD613F4115700853015 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		3F912BB713F40DE800853015 /* JONTUBusRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JONTUBusRoute.m; sourceTree = "<group>"; };
 		3F912BB813F40DE800853015 /* JONTUBusStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JONTUBusStop.h; sourceTree = "<group>"; };
 		3F912BB913F40DE800853015 /* JONTUBusStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JONTUBusStop.m; sourceTree = "<group>"; };
+		3F912BD213F4111C00853015 /* NTU_TVY_TraversityDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTU_TVY_TraversityDelegate.h; sourceTree = "<group>"; };
+		3F912BD313F4111C00853015 /* NTU_TVY_TraversityDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTU_TVY_TraversityDelegate.m; sourceTree = "<group>"; };
+		3F912BD613F4115700853015 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F912BD713F4115700853015 /* UIKit.framework in Frameworks */,
 				3F912B9713F40BE000853015 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +78,7 @@
 		3F912B9513F40BE000853015 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F912BD613F4115700853015 /* UIKit.framework */,
 				3F912B9613F40BE000853015 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -79,10 +87,11 @@
 		3F912B9813F40BE000853015 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3F912BD213F4111C00853015 /* NTU_TVY_TraversityDelegate.h */,
+				3F912BD313F4111C00853015 /* NTU_TVY_TraversityDelegate.m */,
 			);
-			name = Classes;
-			path = NTU_TVY;
-			sourceTree = "<group>";
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
 		};
 		3F912B9913F40BE000853015 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -129,6 +138,7 @@
 				3F912BBE13F40DE800853015 /* JONTUBusEngine.h in Headers */,
 				3F912BC013F40DE800853015 /* JONTUBusRoute.h in Headers */,
 				3F912BC213F40DE900853015 /* JONTUBusStop.h in Headers */,
+				3F912BD413F4111C00853015 /* NTU_TVY_TraversityDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +197,7 @@
 				3F912BBF13F40DE800853015 /* JONTUBusEngine.m in Sources */,
 				3F912BC113F40DE900853015 /* JONTUBusRoute.m in Sources */,
 				3F912BC313F40DE900853015 /* JONTUBusStop.m in Sources */,
+				3F912BD513F4111C00853015 /* NTU_TVY_TraversityDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +295,7 @@
 				3F912BA213F40BE000853015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
