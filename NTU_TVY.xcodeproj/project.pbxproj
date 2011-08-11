@@ -8,12 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		3F912B9713F40BE000853015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F912B9613F40BE000853015 /* Foundation.framework */; };
+		3F912BBA13F40DE800853015 /* JOIris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BB013F40DE800853015 /* JOIris.h */; };
+		3F912BBB13F40DE800853015 /* JOIris.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BB113F40DE800853015 /* JOIris.m */; };
+		3F912BBC13F40DE800853015 /* JONTUBus.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BB213F40DE800853015 /* JONTUBus.h */; };
+		3F912BBD13F40DE800853015 /* JONTUBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BB313F40DE800853015 /* JONTUBus.m */; };
+		3F912BBE13F40DE800853015 /* JONTUBusEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BB413F40DE800853015 /* JONTUBusEngine.h */; };
+		3F912BBF13F40DE800853015 /* JONTUBusEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BB513F40DE800853015 /* JONTUBusEngine.m */; };
+		3F912BC013F40DE800853015 /* JONTUBusRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BB613F40DE800853015 /* JONTUBusRoute.h */; };
+		3F912BC113F40DE900853015 /* JONTUBusRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BB713F40DE800853015 /* JONTUBusRoute.m */; };
+		3F912BC213F40DE900853015 /* JONTUBusStop.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BB813F40DE800853015 /* JONTUBusStop.h */; };
+		3F912BC313F40DE900853015 /* JONTUBusStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BB913F40DE800853015 /* JONTUBusStop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F912B9313F40BE000853015 /* libNTU_TVY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNTU_TVY.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F912B9613F40BE000853015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F912B9A13F40BE000853015 /* NTU_TVY-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NTU_TVY-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		3F912BB013F40DE800853015 /* JOIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOIris.h; sourceTree = "<group>"; };
+		3F912BB113F40DE800853015 /* JOIris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOIris.m; sourceTree = "<group>"; };
+		3F912BB213F40DE800853015 /* JONTUBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JONTUBus.h; sourceTree = "<group>"; };
+		3F912BB313F40DE800853015 /* JONTUBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JONTUBus.m; sourceTree = "<group>"; };
+		3F912BB413F40DE800853015 /* JONTUBusEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JONTUBusEngine.h; sourceTree = "<group>"; };
+		3F912BB513F40DE800853015 /* JONTUBusEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JONTUBusEngine.m; sourceTree = "<group>"; };
+		3F912BB613F40DE800853015 /* JONTUBusRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JONTUBusRoute.h; sourceTree = "<group>"; };
+		3F912BB713F40DE800853015 /* JONTUBusRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JONTUBusRoute.m; sourceTree = "<group>"; };
+		3F912BB813F40DE800853015 /* JONTUBusStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JONTUBusStop.h; sourceTree = "<group>"; };
+		3F912BB913F40DE800853015 /* JONTUBusStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JONTUBusStop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +51,7 @@
 		3F912B8813F40BE000853015 = {
 			isa = PBXGroup;
 			children = (
+				3F912BAF13F40DE800853015 /* JONTUBusCore */,
 				3F912BA413F40CB400853015 /* Resources */,
 				3F912B9913F40BE000853015 /* Supporting Files */,
 				3F912B9813F40BE000853015 /* Classes */,
@@ -79,6 +100,23 @@
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
 		};
+		3F912BAF13F40DE800853015 /* JONTUBusCore */ = {
+			isa = PBXGroup;
+			children = (
+				3F912BB013F40DE800853015 /* JOIris.h */,
+				3F912BB113F40DE800853015 /* JOIris.m */,
+				3F912BB213F40DE800853015 /* JONTUBus.h */,
+				3F912BB313F40DE800853015 /* JONTUBus.m */,
+				3F912BB413F40DE800853015 /* JONTUBusEngine.h */,
+				3F912BB513F40DE800853015 /* JONTUBusEngine.m */,
+				3F912BB613F40DE800853015 /* JONTUBusRoute.h */,
+				3F912BB713F40DE800853015 /* JONTUBusRoute.m */,
+				3F912BB813F40DE800853015 /* JONTUBusStop.h */,
+				3F912BB913F40DE800853015 /* JONTUBusStop.m */,
+			);
+			path = JONTUBusCore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -86,6 +124,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F912BBA13F40DE800853015 /* JOIris.h in Headers */,
+				3F912BBC13F40DE800853015 /* JONTUBus.h in Headers */,
+				3F912BBE13F40DE800853015 /* JONTUBusEngine.h in Headers */,
+				3F912BC013F40DE800853015 /* JONTUBusRoute.h in Headers */,
+				3F912BC213F40DE900853015 /* JONTUBusStop.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F912BBB13F40DE800853015 /* JOIris.m in Sources */,
+				3F912BBD13F40DE800853015 /* JONTUBus.m in Sources */,
+				3F912BBF13F40DE800853015 /* JONTUBusEngine.m in Sources */,
+				3F912BC113F40DE900853015 /* JONTUBusRoute.m in Sources */,
+				3F912BC313F40DE900853015 /* JONTUBusStop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +211,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/Developer/Blackboard/SDK/Headers/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 			};
@@ -179,6 +228,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/Developer/Blackboard/SDK/Headers/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
