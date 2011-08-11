@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StopsTableViewController : UITableViewController
+@interface StopsTableViewController : UITableViewController {
 
+	UILabel *lastUpdate;
+	
+	NSMutableArray *stops;
+	
+	BOOL fillingCache;
+
+	NSOperationQueue *workQueue;
+
+}
+@property (readonly) NSOperationQueue *workQueue;
+-(void)freshen;
 @end

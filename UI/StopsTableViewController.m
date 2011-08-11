@@ -7,8 +7,11 @@
 //
 
 #import "StopsTableViewController.h"
+#import "JONTUBusEngine.h"
+#import "CacheOperation.h"
 
 @implementation StopsTableViewController
+@synthesize workQueue;
 
 - (void)didReceiveMemoryWarning
 {
@@ -24,7 +27,40 @@
 {
     [super viewDidLoad];
 
-	self.title = @"Traversity";
+	UIButton *titleLabel = [UIButton buttonWithType:UIButtonTypeCustom];
+	[titleLabel setTitle:@"Traversity" forState:UIControlStateNormal];
+	titleLabel.frame = CGRectMake(0, 0, 100, 44);
+	titleLabel.titleLabel.font = [UIFont boldSystemFontOfSize:19];
+	titleLabel.titleLabel.shadowColor = [UIColor grayColor];
+	titleLabel.titleLabel.shadowOffset = CGSizeMake(0, -1);
+	titleLabel.showsTouchWhenHighlighted = YES;
+	[titleLabel addTarget:self action:@selector(titleTap:) forControlEvents:UIControlEventTouchUpInside];
+	self.navigationItem.titleView = titleLabel;
+	
+	lastUpdate = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 190, 20)];
+	lastUpdate.backgroundColor = [UIColor clearColor];
+	lastUpdate.textAlignment = UITextAlignmentCenter;
+	lastUpdate.textColor = [UIColor whiteColor];
+	lastUpdate.shadowColor = [UIColor grayColor];
+	lastUpdate.shadowOffset = CGSizeMake(0, -1);
+	lastUpdate.font = [UIFont fontWithName:@"Helvetica-Bold" size:12.0];
+	lastUpdate.text = @"";
+	
+	if ([JONTUBusEngine sharedJONTUBusEngine].brandNew) {
+		CacheOperation *fillCache = [[CacheOperation alloc] initWithDelegate:self];
+		[self.workQueue addOperation:fillCache];
+		[fillCache release];
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+		lastUpdate.text = @"Updating cache...";	// comment for taking of default images
+		fillingCache = YES;
+		/*		
+		 genericDisplay.customView = progressLoad;
+		 progressLoad.progress = 0.0;
+		 */		
+		
+	} else {
+		[self freshen];		
+	}
 }
 
 - (void)viewDidUnload
@@ -60,20 +96,43 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - Miscellaeous selectors
+
+-(void)engineStarted {
+	
+}
+
+-(void)titleTap:(id)sender {
+	
+}
+
+#pragma mark - Data Source stuff
+
+-(void)freshen {
+	JONTUBusEngine *engine = [JONTUBusEngine sharedJONTUBusEngine];	
+	[stops release];
+	stops = [[engine stops] mutableCopy];	
+	
+	NSDateFormatter *f = [[NSDateFormatter alloc] init];
+	[f setDateStyle:NSDateFormatterShortStyle];
+	[f setTimeStyle:NSDateFormatterShortStyle];
+	
+	lastUpdate.text = [NSString stringWithFormat:@"Last updated: %@", [f stringFromDate:engine.lastGetIndexPage]]; // comment for taking of default images
+	[f release];
+	
+	[self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+	return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+	return [stops count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -88,6 +147,10 @@
     // Configure the cell...
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+	cell.textLabel.text = [[stops objectAtIndex:indexPath.row] roadName];
 }
 
 /*

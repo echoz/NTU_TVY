@@ -30,6 +30,22 @@
 		3F912BF313F4133700853015 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F912BF213F4133700853015 /* libicucore.dylib */; };
 		3F912BFC13F4156600853015 /* StopsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BF913F4156600853015 /* StopsTableViewController.h */; };
 		3F912BFD13F4156600853015 /* StopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BFA13F4156600853015 /* StopsTableViewController.m */; };
+		3F912C1D13F4172000853015 /* CacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C1B13F4172000853015 /* CacheOperation.h */; };
+		3F912C1E13F4172000853015 /* CacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C1C13F4172000853015 /* CacheOperation.m */; };
+		3F912C6413F41CB500853015 /* BusStopViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C5C13F41CB500853015 /* BusStopViewController.h */; };
+		3F912C6513F41CB500853015 /* BusStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C5D13F41CB500853015 /* BusStopViewController.m */; };
+		3F912C6613F41CB500853015 /* BusETACell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C5F13F41CB500853015 /* BusETACell.h */; };
+		3F912C6713F41CB500853015 /* BusETACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C6013F41CB500853015 /* BusETACell.m */; };
+		3F912C6813F41CB500853015 /* ArrivalsOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C6213F41CB500853015 /* ArrivalsOperation.h */; };
+		3F912C6913F41CB500853015 /* ArrivalsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C6313F41CB500853015 /* ArrivalsOperation.m */; };
+		3F912C7B13F41D4700853015 /* UIDevice-Hardware.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C7513F41D4600853015 /* UIDevice-Hardware.h */; };
+		3F912C7C13F41D4700853015 /* UIDevice-Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C7613F41D4600853015 /* UIDevice-Hardware.m */; };
+		3F912C7D13F41D4700853015 /* UIDevice-Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C7713F41D4600853015 /* UIDevice-Reachability.h */; };
+		3F912C7E13F41D4700853015 /* UIDevice-Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C7813F41D4600853015 /* UIDevice-Reachability.m */; };
+		3F912C7F13F41D4700853015 /* UIDevice-Orientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C7913F41D4600853015 /* UIDevice-Orientation.h */; };
+		3F912C8013F41D4700853015 /* UIDevice-Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C7A13F41D4600853015 /* UIDevice-Orientation.m */; };
+		3F912C8313F41D4F00853015 /* wwanconnect.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C8113F41D4F00853015 /* wwanconnect.c */; };
+		3F912C8413F41D4F00853015 /* wwanconnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C8213F41D4F00853015 /* wwanconnect.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +74,24 @@
 		3F912BF913F4156600853015 /* StopsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopsTableViewController.h; sourceTree = "<group>"; };
 		3F912BFA13F4156600853015 /* StopsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopsTableViewController.m; sourceTree = "<group>"; };
 		3F912BFB13F4156600853015 /* StopsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StopsTableViewController.xib; sourceTree = "<group>"; };
+		3F912C1B13F4172000853015 /* CacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheOperation.h; sourceTree = "<group>"; };
+		3F912C1C13F4172000853015 /* CacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheOperation.m; sourceTree = "<group>"; };
+		3F912C5C13F41CB500853015 /* BusStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusStopViewController.h; sourceTree = "<group>"; };
+		3F912C5D13F41CB500853015 /* BusStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusStopViewController.m; sourceTree = "<group>"; };
+		3F912C5E13F41CB500853015 /* BusStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusStopViewController.xib; sourceTree = "<group>"; };
+		3F912C5F13F41CB500853015 /* BusETACell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusETACell.h; sourceTree = "<group>"; };
+		3F912C6013F41CB500853015 /* BusETACell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusETACell.m; sourceTree = "<group>"; };
+		3F912C6113F41CB500853015 /* BusETACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusETACell.xib; sourceTree = "<group>"; };
+		3F912C6213F41CB500853015 /* ArrivalsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalsOperation.h; sourceTree = "<group>"; };
+		3F912C6313F41CB500853015 /* ArrivalsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrivalsOperation.m; sourceTree = "<group>"; };
+		3F912C7513F41D4600853015 /* UIDevice-Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Hardware.h"; sourceTree = "<group>"; };
+		3F912C7613F41D4600853015 /* UIDevice-Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-Hardware.m"; sourceTree = "<group>"; };
+		3F912C7713F41D4600853015 /* UIDevice-Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Reachability.h"; sourceTree = "<group>"; };
+		3F912C7813F41D4600853015 /* UIDevice-Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-Reachability.m"; sourceTree = "<group>"; };
+		3F912C7913F41D4600853015 /* UIDevice-Orientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Orientation.h"; sourceTree = "<group>"; };
+		3F912C7A13F41D4600853015 /* UIDevice-Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-Orientation.m"; sourceTree = "<group>"; };
+		3F912C8113F41D4F00853015 /* wwanconnect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wwanconnect.c; sourceTree = "<group>"; };
+		3F912C8213F41D4F00853015 /* wwanconnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wwanconnect.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +151,7 @@
 		3F912B9913F40BE000853015 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F912C7413F41D3B00853015 /* UIDevice */,
 				3F912BED13F4130800853015 /* JONTULocation */,
 				3F912BE813F412E500853015 /* RegexKitLite */,
 				3F912BE513F412D200853015 /* SynthesizeSingleton.h */,
@@ -171,6 +206,7 @@
 		3F912BF813F4152F00853015 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3F912C5B13F41CA900853015 /* Bus Stop */,
 				3F912BFE13F4156C00853015 /* Stops */,
 			);
 			path = UI;
@@ -179,11 +215,43 @@
 		3F912BFE13F4156C00853015 /* Stops */ = {
 			isa = PBXGroup;
 			children = (
+				3F912C1B13F4172000853015 /* CacheOperation.h */,
+				3F912C1C13F4172000853015 /* CacheOperation.m */,
 				3F912BF913F4156600853015 /* StopsTableViewController.h */,
 				3F912BFA13F4156600853015 /* StopsTableViewController.m */,
 				3F912BFB13F4156600853015 /* StopsTableViewController.xib */,
 			);
 			name = Stops;
+			sourceTree = "<group>";
+		};
+		3F912C5B13F41CA900853015 /* Bus Stop */ = {
+			isa = PBXGroup;
+			children = (
+				3F912C5C13F41CB500853015 /* BusStopViewController.h */,
+				3F912C5D13F41CB500853015 /* BusStopViewController.m */,
+				3F912C5E13F41CB500853015 /* BusStopViewController.xib */,
+				3F912C5F13F41CB500853015 /* BusETACell.h */,
+				3F912C6013F41CB500853015 /* BusETACell.m */,
+				3F912C6113F41CB500853015 /* BusETACell.xib */,
+				3F912C6213F41CB500853015 /* ArrivalsOperation.h */,
+				3F912C6313F41CB500853015 /* ArrivalsOperation.m */,
+			);
+			name = "Bus Stop";
+			sourceTree = "<group>";
+		};
+		3F912C7413F41D3B00853015 /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				3F912C8113F41D4F00853015 /* wwanconnect.c */,
+				3F912C8213F41D4F00853015 /* wwanconnect.h */,
+				3F912C7513F41D4600853015 /* UIDevice-Hardware.h */,
+				3F912C7613F41D4600853015 /* UIDevice-Hardware.m */,
+				3F912C7713F41D4600853015 /* UIDevice-Reachability.h */,
+				3F912C7813F41D4600853015 /* UIDevice-Reachability.m */,
+				3F912C7913F41D4600853015 /* UIDevice-Orientation.h */,
+				3F912C7A13F41D4600853015 /* UIDevice-Orientation.m */,
+			);
+			name = UIDevice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +272,14 @@
 				3F912BEB13F412E500853015 /* RegexKitLite.h in Headers */,
 				3F912BF013F4130800853015 /* JOUTM.h in Headers */,
 				3F912BFC13F4156600853015 /* StopsTableViewController.h in Headers */,
+				3F912C1D13F4172000853015 /* CacheOperation.h in Headers */,
+				3F912C6413F41CB500853015 /* BusStopViewController.h in Headers */,
+				3F912C6613F41CB500853015 /* BusETACell.h in Headers */,
+				3F912C6813F41CB500853015 /* ArrivalsOperation.h in Headers */,
+				3F912C7B13F41D4700853015 /* UIDevice-Hardware.h in Headers */,
+				3F912C7D13F41D4700853015 /* UIDevice-Reachability.h in Headers */,
+				3F912C7F13F41D4700853015 /* UIDevice-Orientation.h in Headers */,
+				3F912C8413F41D4F00853015 /* wwanconnect.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +342,14 @@
 				3F912BEC13F412E500853015 /* RegexKitLite.m in Sources */,
 				3F912BF113F4130800853015 /* JOUTM.m in Sources */,
 				3F912BFD13F4156600853015 /* StopsTableViewController.m in Sources */,
+				3F912C1E13F4172000853015 /* CacheOperation.m in Sources */,
+				3F912C6513F41CB500853015 /* BusStopViewController.m in Sources */,
+				3F912C6713F41CB500853015 /* BusETACell.m in Sources */,
+				3F912C6913F41CB500853015 /* ArrivalsOperation.m in Sources */,
+				3F912C7C13F41D4700853015 /* UIDevice-Hardware.m in Sources */,
+				3F912C7E13F41D4700853015 /* UIDevice-Reachability.m in Sources */,
+				3F912C8013F41D4700853015 /* UIDevice-Orientation.m in Sources */,
+				3F912C8313F41D4F00853015 /* wwanconnect.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
