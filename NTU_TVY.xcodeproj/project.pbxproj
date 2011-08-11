@@ -1,0 +1,228 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F912B9713F40BE000853015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F912B9613F40BE000853015 /* Foundation.framework */; };
+		3F912B9D13F40BE000853015 /* NTU_TVY.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912B9C13F40BE000853015 /* NTU_TVY.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F912B9313F40BE000853015 /* libNTU_TVY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNTU_TVY.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F912B9613F40BE000853015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3F912B9A13F40BE000853015 /* NTU_TVY-Prefix.pch */ = {isa = PBXFileReference; path = "NTU_TVY-Prefix.pch"; sourceTree = "<group>"; };
+		3F912B9B13F40BE000853015 /* NTU_TVY.h */ = {isa = PBXFileReference; path = NTU_TVY.h; sourceTree = "<group>"; };
+		3F912B9C13F40BE000853015 /* NTU_TVY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTU_TVY.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F912B9013F40BE000853015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F912B9713F40BE000853015 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F912B8813F40BE000853015 = {
+			isa = PBXGroup;
+			children = (
+				3F912B9813F40BE000853015 /* NTU_TVY */,
+				3F912B9513F40BE000853015 /* Frameworks */,
+				3F912B9413F40BE000853015 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F912B9413F40BE000853015 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F912B9313F40BE000853015 /* libNTU_TVY.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F912B9513F40BE000853015 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F912B9613F40BE000853015 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F912B9813F40BE000853015 /* NTU_TVY */ = {
+			isa = PBXGroup;
+			children = (
+				3F912B9B13F40BE000853015 /* NTU_TVY.h */,
+				3F912B9C13F40BE000853015 /* NTU_TVY.m */,
+				3F912B9913F40BE000853015 /* Supporting Files */,
+			);
+			path = NTU_TVY;
+			sourceTree = "<group>";
+		};
+		3F912B9913F40BE000853015 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F912B9A13F40BE000853015 /* NTU_TVY-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3F912B9113F40BE000853015 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3F912B9213F40BE000853015 /* NTU_TVY */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F912BA013F40BE000853015 /* Build configuration list for PBXNativeTarget "NTU_TVY" */;
+			buildPhases = (
+				3F912B8F13F40BE000853015 /* Sources */,
+				3F912B9013F40BE000853015 /* Frameworks */,
+				3F912B9113F40BE000853015 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NTU_TVY;
+			productName = NTU_TVY;
+			productReference = 3F912B9313F40BE000853015 /* libNTU_TVY.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F912B8A13F40BE000853015 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 3F912B8D13F40BE000853015 /* Build configuration list for PBXProject "NTU_TVY" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3F912B8813F40BE000853015;
+			productRefGroup = 3F912B9413F40BE000853015 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F912B9213F40BE000853015 /* NTU_TVY */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F912B8F13F40BE000853015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F912B9D13F40BE000853015 /* NTU_TVY.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3F912B9E13F40BE000853015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3F912B9F13F40BE000853015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F912BA113F40BE000853015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NTU_TVY.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NTU_TVY/NTU_TVY-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3F912BA213F40BE000853015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NTU_TVY.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NTU_TVY/NTU_TVY-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F912B8D13F40BE000853015 /* Build configuration list for PBXProject "NTU_TVY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F912B9E13F40BE000853015 /* Debug */,
+				3F912B9F13F40BE000853015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F912BA013F40BE000853015 /* Build configuration list for PBXNativeTarget "NTU_TVY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F912BA113F40BE000853015 /* Debug */,
+				3F912BA213F40BE000853015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F912B8A13F40BE000853015 /* Project object */;
+}
