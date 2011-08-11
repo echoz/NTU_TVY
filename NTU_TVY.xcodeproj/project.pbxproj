@@ -8,15 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3F912B9713F40BE000853015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F912B9613F40BE000853015 /* Foundation.framework */; };
-		3F912B9D13F40BE000853015 /* NTU_TVY.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912B9C13F40BE000853015 /* NTU_TVY.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F912B9313F40BE000853015 /* libNTU_TVY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNTU_TVY.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F912B9613F40BE000853015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3F912B9A13F40BE000853015 /* NTU_TVY-Prefix.pch */ = {isa = PBXFileReference; path = "NTU_TVY-Prefix.pch"; sourceTree = "<group>"; };
-		3F912B9B13F40BE000853015 /* NTU_TVY.h */ = {isa = PBXFileReference; path = NTU_TVY.h; sourceTree = "<group>"; };
-		3F912B9C13F40BE000853015 /* NTU_TVY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTU_TVY.m; sourceTree = "<group>"; };
+		3F912B9A13F40BE000853015 /* NTU_TVY-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NTU_TVY-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +31,9 @@
 		3F912B8813F40BE000853015 = {
 			isa = PBXGroup;
 			children = (
-				3F912B9813F40BE000853015 /* NTU_TVY */,
+				3F912BA413F40CB400853015 /* Resources */,
+				3F912B9913F40BE000853015 /* Supporting Files */,
+				3F912B9813F40BE000853015 /* Classes */,
 				3F912B9513F40BE000853015 /* Frameworks */,
 				3F912B9413F40BE000853015 /* Products */,
 			);
@@ -56,13 +55,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3F912B9813F40BE000853015 /* NTU_TVY */ = {
+		3F912B9813F40BE000853015 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3F912B9B13F40BE000853015 /* NTU_TVY.h */,
-				3F912B9C13F40BE000853015 /* NTU_TVY.m */,
-				3F912B9913F40BE000853015 /* Supporting Files */,
 			);
+			name = Classes;
 			path = NTU_TVY;
 			sourceTree = "<group>";
 		};
@@ -72,7 +69,15 @@
 				3F912B9A13F40BE000853015 /* NTU_TVY-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = NTU_TVY;
 			sourceTree = "<group>";
+		};
+		3F912BA413F40CB400853015 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -109,6 +114,9 @@
 /* Begin PBXProject section */
 		3F912B8A13F40BE000853015 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 3F912B8D13F40BE000853015 /* Build configuration list for PBXProject "NTU_TVY" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -131,7 +139,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F912B9D13F40BE000853015 /* NTU_TVY.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +191,11 @@
 				DSTROOT = /tmp/NTU_TVY.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NTU_TVY/NTU_TVY-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos4.3;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -196,8 +206,11 @@
 				DSTROOT = /tmp/NTU_TVY.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NTU_TVY/NTU_TVY-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos4.3;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
