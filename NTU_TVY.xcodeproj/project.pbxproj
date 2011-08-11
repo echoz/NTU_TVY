@@ -46,6 +46,10 @@
 		3F912C8013F41D4700853015 /* UIDevice-Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C7A13F41D4600853015 /* UIDevice-Orientation.m */; };
 		3F912C8313F41D4F00853015 /* wwanconnect.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C8113F41D4F00853015 /* wwanconnect.c */; };
 		3F912C8413F41D4F00853015 /* wwanconnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C8213F41D4F00853015 /* wwanconnect.h */; };
+		3F912C8713F41DDB00853015 /* Friendly.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C8513F41DDB00853015 /* Friendly.h */; };
+		3F912C8813F41DDB00853015 /* Friendly.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C8613F41DDB00853015 /* Friendly.m */; };
+		3F912C8B13F41DF500853015 /* NSString+htmlentitiesaddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912C8913F41DF400853015 /* NSString+htmlentitiesaddition.h */; };
+		3F912C8C13F41DF500853015 /* NSString+htmlentitiesaddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912C8A13F41DF400853015 /* NSString+htmlentitiesaddition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +96,10 @@
 		3F912C7A13F41D4600853015 /* UIDevice-Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-Orientation.m"; sourceTree = "<group>"; };
 		3F912C8113F41D4F00853015 /* wwanconnect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wwanconnect.c; sourceTree = "<group>"; };
 		3F912C8213F41D4F00853015 /* wwanconnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wwanconnect.h; sourceTree = "<group>"; };
+		3F912C8513F41DDB00853015 /* Friendly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friendly.h; sourceTree = "<group>"; };
+		3F912C8613F41DDB00853015 /* Friendly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friendly.m; sourceTree = "<group>"; };
+		3F912C8913F41DF400853015 /* NSString+htmlentitiesaddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+htmlentitiesaddition.h"; sourceTree = "<group>"; };
+		3F912C8A13F41DF400853015 /* NSString+htmlentitiesaddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+htmlentitiesaddition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				3F912B9913F40BE000853015 /* Supporting Files */,
-				3F912BAF13F40DE800853015 /* JONTUBusCore */,
 				3F912BD213F4111C00853015 /* NTU_TVY_TraversityDelegate.h */,
 				3F912BD313F4111C00853015 /* NTU_TVY_TraversityDelegate.m */,
 			);
@@ -151,9 +158,14 @@
 		3F912B9913F40BE000853015 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F912BAF13F40DE800853015 /* JONTUBusCore */,
 				3F912C7413F41D3B00853015 /* UIDevice */,
 				3F912BED13F4130800853015 /* JONTULocation */,
 				3F912BE813F412E500853015 /* RegexKitLite */,
+				3F912C8513F41DDB00853015 /* Friendly.h */,
+				3F912C8613F41DDB00853015 /* Friendly.m */,
+				3F912C8913F41DF400853015 /* NSString+htmlentitiesaddition.h */,
+				3F912C8A13F41DF400853015 /* NSString+htmlentitiesaddition.m */,
 				3F912BE513F412D200853015 /* SynthesizeSingleton.h */,
 				3F912BDC13F4121800853015 /* NTU_TVY-Prefix.pch */,
 			);
@@ -280,6 +292,8 @@
 				3F912C7D13F41D4700853015 /* UIDevice-Reachability.h in Headers */,
 				3F912C7F13F41D4700853015 /* UIDevice-Orientation.h in Headers */,
 				3F912C8413F41D4F00853015 /* wwanconnect.h in Headers */,
+				3F912C8713F41DDB00853015 /* Friendly.h in Headers */,
+				3F912C8B13F41DF500853015 /* NSString+htmlentitiesaddition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +364,8 @@
 				3F912C7E13F41D4700853015 /* UIDevice-Reachability.m in Sources */,
 				3F912C8013F41D4700853015 /* UIDevice-Orientation.m in Sources */,
 				3F912C8313F41D4F00853015 /* wwanconnect.c in Sources */,
+				3F912C8813F41DDB00853015 /* Friendly.m in Sources */,
+				3F912C8C13F41DF500853015 /* NSString+htmlentitiesaddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,11 +418,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/NTU_TVY.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting Files/NTU_TVY-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos4.3;
 				SKIP_INSTALL = YES;
@@ -417,11 +434,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/NTU_TVY.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting Files/NTU_TVY-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos4.3;
 				SKIP_INSTALL = YES;

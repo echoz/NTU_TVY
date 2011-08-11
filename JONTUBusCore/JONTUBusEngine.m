@@ -190,6 +190,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(JONTUBusEngine);
 -(NSArray *)stopsWithRefresh:(BOOL)refresh {
 	if (refresh) {
 		NSString *matchString = [[NSString alloc] initWithData:[self getIndexPage] encoding:NSASCIIStringEncoding];
+
 		NSArray *busstops = [matchString arrayOfCaptureComponentsMatchedByRegex:regexBusStop];
 		NSArray *otherBuses = nil;
 		JONTUBusStop *stop;

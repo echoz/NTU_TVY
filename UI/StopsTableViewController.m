@@ -46,6 +46,8 @@
 	lastUpdate.font = [UIFont fontWithName:@"Helvetica-Bold" size:12.0];
 	lastUpdate.text = @"";
 	
+	workQueue = [[NSOperationQueue alloc] init];
+	
 	if ([JONTUBusEngine sharedJONTUBusEngine].brandNew) {
 		CacheOperation *fillCache = [[CacheOperation alloc] initWithDelegate:self];
 		[self.workQueue addOperation:fillCache];
@@ -100,6 +102,27 @@
 
 -(void)engineStarted {
 	
+	NSLog(@"Fill Cache complete");
+	fillingCache = NO;
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+	//	self.navigationItem.rightBarButtonItem = refreshCache;
+	[[JONTUBusEngine sharedJONTUBusEngine] setHoldCache:-1];
+	
+	NSString *matchString = [[NSString alloc] initWithData:[[JONTUBusEngine sharedJONTUBusEngine] indexPageCache] encoding:NSASCIIStringEncoding];
+	/*
+	if ([matchString rangeOfString:@"Database Error"].location != NSNotFound) {
+		[self promptForPossibleError];
+	}
+	 */
+	[matchString release];
+	[self freshen];
+	[UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:0.75];
+	[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+	[self.tableView setAlpha:1];
+	[self.tableView setScrollEnabled:YES];
+	[self.tableView setAllowsSelection:YES];
+	[UIView commitAnimations];	
 }
 
 -(void)titleTap:(id)sender {
@@ -127,7 +150,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return 0;
+	return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -150,7 +173,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-	cell.textLabel.text = [[stops objectAtIndex:indexPath.row] roadName];
+	cell.textLabel.text = [[stops objectAtIndex:indexPath.row] desc];
 }
 
 /*

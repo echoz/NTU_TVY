@@ -7,12 +7,10 @@
 //
 
 #import "BusStopViewController.h"
-#import "BusesViewController.h"
+//#import "BusesViewController.h"
 #import "ArrivalsOperation.h"
-#import "BusViewController.h"
+//#import "BusViewController.h"
 #import "NSString+htmlentitiesaddition.h"
-#import "RHSettings.h"
-#import "FlurryAPI.h"
 #import <math.h>
 #import "Friendly.h"
 
@@ -67,20 +65,6 @@
 	
 	scheduleWatcher = NO;
 	
-	NSMutableArray *favs = [[RHSettings sharedRHSettings].stash valueForKey:@"favorites"];
-	if (!favs)
-		favs = [NSMutableArray array];
-	
-	if ([favs indexOfObject:[stop code]] != NSNotFound) {
-		[star setImage:[UIImage imageNamed:@"star-icon-filled.png"]];
-	} else {
-		[star setImage:[UIImage imageNamed:@"star-icon.png"]];
-	}
-	
-	NSMutableDictionary *flurryparms = [NSMutableDictionary dictionary];
-	[flurryparms setObject:[stop code] forKey:@"stop-code"];
-	[FlurryAPI logEvent:@"STOP_HIT" withParameters:flurryparms];
-
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= (float)4.2) {
 
 		[self addObserver:self forKeyPath:@"irisArrivals" options:0 context:NULL];
@@ -265,31 +249,6 @@
 		}
 		[self.tableView endUpdates];
 	}
-}
-
--(IBAction)favorite {
-	NSMutableArray *favs = [[RHSettings sharedRHSettings].stash valueForKey:@"favorites"];
-	if (!favs)
-		favs = [NSMutableArray array];
-	
-	NSMutableDictionary *flurryparms = [NSMutableDictionary dictionary];
-	[flurryparms setObject:[stop code] forKey:@"stop-code"];
-	
-	if ([favs indexOfObject:[stop code]] == NSNotFound) {
-		[star setImage:[UIImage imageNamed:@"star-icon-filled.png"]];
-		[favs addObject:[stop code]];
-		[[RHSettings sharedRHSettings].stash setObject:favs forKey:@"favorites"];
-		
-		[FlurryAPI logEvent:@"STOP_FAV" withParameters:flurryparms];		
-	} else {
-		[star setImage:[UIImage imageNamed:@"star-icon.png"]];
-		[favs removeObject:[stop code]];
-		[[RHSettings sharedRHSettings].stash setObject:favs forKey:@"favorites"];
-		
-		[FlurryAPI logEvent:@"STOP_UNFAV" withParameters:flurryparms];
-	}
-	[[RHSettings sharedRHSettings] saveSettings];
-
 }
 
 -(IBAction)refresh {
@@ -498,7 +457,7 @@
 	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
 	// [self.navigationController pushViewController:anotherViewController];
 	// [anotherViewController release];
-	
+	/*
 	if (indexPath.section == 0) {
 		if ([[arrivals objectAtIndex:indexPath.row] valueForKey:@"err"]) {
 			BusesViewController *busesView = [[BusesViewController alloc] initWithNibName:@"BusesViewController" bundle:nil];
@@ -515,6 +474,7 @@
 		}
 		
 	}
+	 */
 	
 }
 
