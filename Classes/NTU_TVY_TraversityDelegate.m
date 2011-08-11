@@ -11,5 +11,10 @@
 @implementation NTU_TVY_TraversityDelegate
 @synthesize nav;
 
+-(UIViewController *)rootView {
+	return self.nav;
+}
+
+
 
 @end

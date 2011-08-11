@@ -21,12 +21,18 @@
 		3F912BD413F4111C00853015 /* NTU_TVY_TraversityDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BD213F4111C00853015 /* NTU_TVY_TraversityDelegate.h */; };
 		3F912BD513F4111C00853015 /* NTU_TVY_TraversityDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BD313F4111C00853015 /* NTU_TVY_TraversityDelegate.m */; };
 		3F912BD713F4115700853015 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F912BD613F4115700853015 /* UIKit.framework */; };
+		3F912BDD13F4121800853015 /* NTU_TVY-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BDC13F4121800853015 /* NTU_TVY-Prefix.pch */; };
+		3F912BE613F412D200853015 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BE513F412D200853015 /* SynthesizeSingleton.h */; };
+		3F912BEB13F412E500853015 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BE913F412E500853015 /* RegexKitLite.h */; };
+		3F912BEC13F412E500853015 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BEA13F412E500853015 /* RegexKitLite.m */; };
+		3F912BF013F4130800853015 /* JOUTM.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BEE13F4130800853015 /* JOUTM.h */; };
+		3F912BF113F4130800853015 /* JOUTM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BEF13F4130800853015 /* JOUTM.m */; };
+		3F912BF313F4133700853015 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F912BF213F4133700853015 /* libicucore.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F912B9313F40BE000853015 /* libNTU_TVY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNTU_TVY.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F912B9613F40BE000853015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3F912B9A13F40BE000853015 /* NTU_TVY-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NTU_TVY-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		3F912BB013F40DE800853015 /* JOIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOIris.h; sourceTree = "<group>"; };
 		3F912BB113F40DE800853015 /* JOIris.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOIris.m; sourceTree = "<group>"; };
 		3F912BB213F40DE800853015 /* JONTUBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JONTUBus.h; sourceTree = "<group>"; };
@@ -40,6 +46,13 @@
 		3F912BD213F4111C00853015 /* NTU_TVY_TraversityDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTU_TVY_TraversityDelegate.h; sourceTree = "<group>"; };
 		3F912BD313F4111C00853015 /* NTU_TVY_TraversityDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTU_TVY_TraversityDelegate.m; sourceTree = "<group>"; };
 		3F912BD613F4115700853015 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3F912BDC13F4121800853015 /* NTU_TVY-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NTU_TVY-Prefix.pch"; path = "Supporting Files/NTU_TVY-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		3F912BE513F412D200853015 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		3F912BE913F412E500853015 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		3F912BEA13F412E500853015 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		3F912BEE13F4130800853015 /* JOUTM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOUTM.h; sourceTree = "<group>"; };
+		3F912BEF13F4130800853015 /* JOUTM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOUTM.m; sourceTree = "<group>"; };
+		3F912BF213F4133700853015 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F912BF313F4133700853015 /* libicucore.dylib in Frameworks */,
 				3F912BD713F4115700853015 /* UIKit.framework in Frameworks */,
 				3F912B9713F40BE000853015 /* Foundation.framework in Frameworks */,
 			);
@@ -78,6 +92,7 @@
 		3F912B9513F40BE000853015 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F912BF213F4133700853015 /* libicucore.dylib */,
 				3F912BD613F4115700853015 /* UIKit.framework */,
 				3F912B9613F40BE000853015 /* Foundation.framework */,
 			);
@@ -96,11 +111,13 @@
 		3F912B9913F40BE000853015 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3F912B9A13F40BE000853015 /* NTU_TVY-Prefix.pch */,
+				3F912BED13F4130800853015 /* JONTULocation */,
+				3F912BE813F412E500853015 /* RegexKitLite */,
+				3F912BE513F412D200853015 /* SynthesizeSingleton.h */,
+				3F912BDC13F4121800853015 /* NTU_TVY-Prefix.pch */,
 			);
-			name = "Supporting Files";
-			path = NTU_TVY;
-			sourceTree = "<group>";
+			path = "Supporting Files";
+			sourceTree = SOURCE_ROOT;
 		};
 		3F912BA413F40CB400853015 /* Resources */ = {
 			isa = PBXGroup;
@@ -126,6 +143,24 @@
 			path = JONTUBusCore;
 			sourceTree = "<group>";
 		};
+		3F912BE813F412E500853015 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				3F912BE913F412E500853015 /* RegexKitLite.h */,
+				3F912BEA13F412E500853015 /* RegexKitLite.m */,
+			);
+			path = RegexKitLite;
+			sourceTree = "<group>";
+		};
+		3F912BED13F4130800853015 /* JONTULocation */ = {
+			isa = PBXGroup;
+			children = (
+				3F912BEE13F4130800853015 /* JOUTM.h */,
+				3F912BEF13F4130800853015 /* JOUTM.m */,
+			);
+			path = JONTULocation;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -139,6 +174,10 @@
 				3F912BC013F40DE800853015 /* JONTUBusRoute.h in Headers */,
 				3F912BC213F40DE900853015 /* JONTUBusStop.h in Headers */,
 				3F912BD413F4111C00853015 /* NTU_TVY_TraversityDelegate.h in Headers */,
+				3F912BDD13F4121800853015 /* NTU_TVY-Prefix.pch in Headers */,
+				3F912BE613F412D200853015 /* SynthesizeSingleton.h in Headers */,
+				3F912BEB13F412E500853015 /* RegexKitLite.h in Headers */,
+				3F912BF013F4130800853015 /* JOUTM.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +237,8 @@
 				3F912BC113F40DE900853015 /* JONTUBusRoute.m in Sources */,
 				3F912BC313F40DE900853015 /* JONTUBusStop.m in Sources */,
 				3F912BD513F4111C00853015 /* NTU_TVY_TraversityDelegate.m in Sources */,
+				3F912BEC13F412E500853015 /* RegexKitLite.m in Sources */,
+				3F912BF113F4130800853015 /* JOUTM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +292,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/NTU_TVY.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NTU_TVY/NTU_TVY-Prefix.pch";
+				GCC_PREFIX_HEADER = "Supporting Files/NTU_TVY-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_LDFLAGS = "-ObjC";
@@ -266,7 +307,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/NTU_TVY.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NTU_TVY/NTU_TVY-Prefix.pch";
+				GCC_PREFIX_HEADER = "Supporting Files/NTU_TVY-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_LDFLAGS = "-ObjC";

@@ -9,6 +9,7 @@ build/*
 *.perspectivev3
 !default.perspectivev3
 *.xcworkspace
+*.xcworkspace/xcuserdata
 !default.xcworkspace
 !project.xcworkspace
 xcuserdata
