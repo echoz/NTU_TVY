@@ -28,6 +28,8 @@
 		3F912BF013F4130800853015 /* JOUTM.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BEE13F4130800853015 /* JOUTM.h */; };
 		3F912BF113F4130800853015 /* JOUTM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BEF13F4130800853015 /* JOUTM.m */; };
 		3F912BF313F4133700853015 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F912BF213F4133700853015 /* libicucore.dylib */; };
+		3F912BFC13F4156600853015 /* StopsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BF913F4156600853015 /* StopsTableViewController.h */; };
+		3F912BFD13F4156600853015 /* StopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BFA13F4156600853015 /* StopsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,9 @@
 		3F912BEE13F4130800853015 /* JOUTM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOUTM.h; sourceTree = "<group>"; };
 		3F912BEF13F4130800853015 /* JOUTM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOUTM.m; sourceTree = "<group>"; };
 		3F912BF213F4133700853015 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		3F912BF913F4156600853015 /* StopsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopsTableViewController.h; sourceTree = "<group>"; };
+		3F912BFA13F4156600853015 /* StopsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopsTableViewController.m; sourceTree = "<group>"; };
+		3F912BFB13F4156600853015 /* StopsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StopsTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +77,8 @@
 		3F912B8813F40BE000853015 = {
 			isa = PBXGroup;
 			children = (
-				3F912BAF13F40DE800853015 /* JONTUBusCore */,
+				3F912BF813F4152F00853015 /* UI */,
 				3F912BA413F40CB400853015 /* Resources */,
-				3F912B9913F40BE000853015 /* Supporting Files */,
 				3F912B9813F40BE000853015 /* Classes */,
 				3F912B9513F40BE000853015 /* Frameworks */,
 				3F912B9413F40BE000853015 /* Products */,
@@ -102,6 +106,8 @@
 		3F912B9813F40BE000853015 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3F912B9913F40BE000853015 /* Supporting Files */,
+				3F912BAF13F40DE800853015 /* JONTUBusCore */,
 				3F912BD213F4111C00853015 /* NTU_TVY_TraversityDelegate.h */,
 				3F912BD313F4111C00853015 /* NTU_TVY_TraversityDelegate.m */,
 			);
@@ -140,7 +146,8 @@
 				3F912BB813F40DE800853015 /* JONTUBusStop.h */,
 				3F912BB913F40DE800853015 /* JONTUBusStop.m */,
 			);
-			path = JONTUBusCore;
+			name = JONTUBusCore;
+			path = ../JONTUBusCore;
 			sourceTree = "<group>";
 		};
 		3F912BE813F412E500853015 /* RegexKitLite */ = {
@@ -161,6 +168,24 @@
 			path = JONTULocation;
 			sourceTree = SOURCE_ROOT;
 		};
+		3F912BF813F4152F00853015 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3F912BFE13F4156C00853015 /* Stops */,
+			);
+			path = UI;
+			sourceTree = SOURCE_ROOT;
+		};
+		3F912BFE13F4156C00853015 /* Stops */ = {
+			isa = PBXGroup;
+			children = (
+				3F912BF913F4156600853015 /* StopsTableViewController.h */,
+				3F912BFA13F4156600853015 /* StopsTableViewController.m */,
+				3F912BFB13F4156600853015 /* StopsTableViewController.xib */,
+			);
+			name = Stops;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -178,6 +203,7 @@
 				3F912BE613F412D200853015 /* SynthesizeSingleton.h in Headers */,
 				3F912BEB13F412E500853015 /* RegexKitLite.h in Headers */,
 				3F912BF013F4130800853015 /* JOUTM.h in Headers */,
+				3F912BFC13F4156600853015 /* StopsTableViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +265,7 @@
 				3F912BD513F4111C00853015 /* NTU_TVY_TraversityDelegate.m in Sources */,
 				3F912BEC13F412E500853015 /* RegexKitLite.m in Sources */,
 				3F912BF113F4130800853015 /* JOUTM.m in Sources */,
+				3F912BFD13F4156600853015 /* StopsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
