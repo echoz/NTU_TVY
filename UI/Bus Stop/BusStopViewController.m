@@ -40,12 +40,7 @@
 	irisArrivals = [[NSMutableArray arrayWithCapacity:0] retain];
 	workQueue = [[NSOperationQueue alloc] init];
 	[workQueue setMaxConcurrentOperationCount:5];
-	
-	self.toolbarItems = [NSArray arrayWithObjects:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease],
-						 star,
-						 [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease],
-						 nil];
-	
+		
 	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:[[stop desc] removeHTMLEntities] style:UIBarButtonItemStyleBordered target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
     [backButton release];		
@@ -316,15 +311,15 @@
 	}	
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];	
 	[self.navigationController setToolbarHidden:YES animated:YES];
-	[super viewDidAppear:animated];	
 }
 
 
 - (void)viewWillDisappear:(BOOL)animated {
-	[self.navigationController setToolbarHidden:YES animated:YES];
 	[super viewWillDisappear:animated];
+	[self.navigationController setToolbarHidden:YES animated:YES];
 }
 
 /*
