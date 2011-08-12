@@ -6,6 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "BusStopViewController.h"
 #import "StopsTableViewController.h"
 #import "JONTUBusEngine.h"
 #import "JONTUBusStop.h"
@@ -393,6 +394,11 @@ NSInteger compareStops(id stop1, id stop2, void *context){
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    BusStopViewController *stopview = [[BusStopViewController alloc] initWithStyle:UITableViewStylePlain];
+    stopview.busstopid = ((JONTUBusStop *)[stops objectAtIndex:indexPath.row]).busstopid;
+    
+    [self.navigationController pushViewController:stopview animated:YES];
+    [stopview release];
 }
 
 @end

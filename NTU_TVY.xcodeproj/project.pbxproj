@@ -55,7 +55,7 @@
 
 /* Begin PBXFileReference section */
 		3F875A8D13F4DD5700DFA035 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3F875AD013F4EC0800DFA035 /* NTU_TVY_Traversity_alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NTU_TVY_Traversity_alert.png; sourceTree = "<group>"; };
+		3F875AD313F4EF3E00DFA035 /* NTU_TVY_Traversity.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NTU_TVY_Traversity.bundle; sourceTree = "<group>"; };
 		3F912B9313F40BE000853015 /* libNTU_TVY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNTU_TVY.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F912B9613F40BE000853015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F912BB013F40DE800853015 /* JOIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOIris.h; sourceTree = "<group>"; };
@@ -84,10 +84,8 @@
 		3F912C1C13F4172000853015 /* CacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheOperation.m; sourceTree = "<group>"; };
 		3F912C5C13F41CB500853015 /* BusStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusStopViewController.h; sourceTree = "<group>"; };
 		3F912C5D13F41CB500853015 /* BusStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusStopViewController.m; sourceTree = "<group>"; };
-		3F912C5E13F41CB500853015 /* BusStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusStopViewController.xib; sourceTree = "<group>"; };
 		3F912C5F13F41CB500853015 /* BusETACell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusETACell.h; sourceTree = "<group>"; };
 		3F912C6013F41CB500853015 /* BusETACell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusETACell.m; sourceTree = "<group>"; };
-		3F912C6113F41CB500853015 /* BusETACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusETACell.xib; sourceTree = "<group>"; };
 		3F912C6213F41CB500853015 /* ArrivalsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalsOperation.h; sourceTree = "<group>"; };
 		3F912C6313F41CB500853015 /* ArrivalsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrivalsOperation.m; sourceTree = "<group>"; };
 		3F912C7513F41D4600853015 /* UIDevice-Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Hardware.h"; sourceTree = "<group>"; };
@@ -179,7 +177,7 @@
 		3F912BA413F40CB400853015 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3F875AD013F4EC0800DFA035 /* NTU_TVY_Traversity_alert.png */,
+				3F875AD313F4EF3E00DFA035 /* NTU_TVY_Traversity.bundle */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -245,10 +243,8 @@
 			children = (
 				3F912C5C13F41CB500853015 /* BusStopViewController.h */,
 				3F912C5D13F41CB500853015 /* BusStopViewController.m */,
-				3F912C5E13F41CB500853015 /* BusStopViewController.xib */,
 				3F912C5F13F41CB500853015 /* BusETACell.h */,
 				3F912C6013F41CB500853015 /* BusETACell.m */,
-				3F912C6113F41CB500853015 /* BusETACell.xib */,
 				3F912C6213F41CB500853015 /* ArrivalsOperation.h */,
 				3F912C6313F41CB500853015 /* ArrivalsOperation.m */,
 			);
