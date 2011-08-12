@@ -310,6 +310,31 @@ NSInteger compareStops(id stop1, id stop2, void *context){
     [self.tableView reloadData];
 }
 
+-(void)engineStarted {
+	
+	NSLog(@"Fill Cache complete");
+	fillingCache = NO;
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+	self.navigationItem.rightBarButtonItem = refreshCache;
+	[[JONTUBusEngine sharedJONTUBusEngine] setHoldCache:-1];
+	
+	NSString *matchString = [[NSString alloc] initWithData:[[JONTUBusEngine sharedJONTUBusEngine] indexPageCache] encoding:NSASCIIStringEncoding];
+	
+	if ([matchString rangeOfString:@"Database Error"].location != NSNotFound) {
+		[self promptForPossibleError];
+	}
+	[matchString release];
+	[self freshen];
+	[UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:0.75];
+	[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+	[self.tableView setAlpha:1];
+	[self.tableView setScrollEnabled:YES];
+	[self.tableView setAllowsSelection:YES];
+	[UIView commitAnimations];		
+	
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -394,7 +419,7 @@ NSInteger compareStops(id stop1, id stop2, void *context){
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    BusStopViewController *stopview = [[BusStopViewController alloc] initWithStyle:UITableViewStylePlain];
+    BusStopViewController *stopview = [[BusStopViewController alloc] initWithNibName:@"NTU_TVY_Traversity_BusStopViewController" bundle:nil];
     stopview.busstopid = ((JONTUBusStop *)[stops objectAtIndex:indexPath.row]).busstopid;
     
     [self.navigationController pushViewController:stopview animated:YES];

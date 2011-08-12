@@ -399,7 +399,7 @@
 	
     BusETACell *cell = (BusETACell *)[tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     if (cell == nil) {
-		[[NSBundle mainBundle] loadNibNamed:@"BusETACell" owner:self options:nil];
+		[[NSBundle mainBundle] loadNibNamed:@"NTU_TVY_Traversity_BusETACell" owner:self options:nil];
 		cell = etaCell;
 		self.etaCell = nil;
 		cell.detailLabel.highlightedTextColor = [UIColor whiteColor];

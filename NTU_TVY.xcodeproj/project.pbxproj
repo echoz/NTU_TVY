@@ -55,7 +55,9 @@
 
 /* Begin PBXFileReference section */
 		3F875A8D13F4DD5700DFA035 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3F875AD313F4EF3E00DFA035 /* NTU_TVY_Traversity.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NTU_TVY_Traversity.bundle; sourceTree = "<group>"; };
+		3F875ADD13F5059200DFA035 /* NTU_TVY_Traversity_BusETACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTU_TVY_Traversity_BusETACell.xib; sourceTree = "<group>"; };
+		3F875ADE13F5059200DFA035 /* NTU_TVY_Traversity_BusStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTU_TVY_Traversity_BusStopViewController.xib; sourceTree = "<group>"; };
+		3F875ADF13F5059200DFA035 /* NTU_TVY_Traversity_alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NTU_TVY_Traversity_alert.png; sourceTree = "<group>"; };
 		3F912B9313F40BE000853015 /* libNTU_TVY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNTU_TVY.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F912B9613F40BE000853015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F912BB013F40DE800853015 /* JOIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOIris.h; sourceTree = "<group>"; };
@@ -177,7 +179,9 @@
 		3F912BA413F40CB400853015 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3F875AD313F4EF3E00DFA035 /* NTU_TVY_Traversity.bundle */,
+				3F875ADD13F5059200DFA035 /* NTU_TVY_Traversity_BusETACell.xib */,
+				3F875ADE13F5059200DFA035 /* NTU_TVY_Traversity_BusStopViewController.xib */,
+				3F875ADF13F5059200DFA035 /* NTU_TVY_Traversity_alert.png */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
