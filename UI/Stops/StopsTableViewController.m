@@ -14,6 +14,7 @@
 #import "NSString+htmlentitiesaddition.h"
 #import "Friendly.h"
 #import "UIDevice-Reachability.h"
+#import "InfoViewController.h"
 
 @implementation StopsTableViewController
 @synthesize workQueue;
@@ -184,7 +185,9 @@
 }
 
 -(void)titleTap:(id)sender {
-	
+    InfoViewController *modalView = [[InfoViewController alloc] initWithNibName:@"NTU_TVY_Traversity_InfoViewController" bundle:nil];
+	[self presentModalViewController:modalView animated:YES];
+	[modalView release];
 }
 
 #pragma mark - Data Source stuff

@@ -7,9 +7,9 @@
 //
 
 #import "BusStopViewController.h"
-//#import "BusesViewController.h"
+#import "BusesViewController.h"
 #import "ArrivalsOperation.h"
-//#import "BusViewController.h"
+#import "BusViewController.h"
 #import "NSString+htmlentitiesaddition.h"
 #import <math.h>
 #import "Friendly.h"
@@ -317,7 +317,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-	[self.navigationController setToolbarHidden:NO animated:YES];
+	[self.navigationController setToolbarHidden:YES animated:YES];
 	[super viewDidAppear:animated];	
 }
 
@@ -457,15 +457,15 @@
 	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
 	// [self.navigationController pushViewController:anotherViewController];
 	// [anotherViewController release];
-	/*
+     
 	if (indexPath.section == 0) {
 		if ([[arrivals objectAtIndex:indexPath.row] valueForKey:@"err"]) {
-			BusesViewController *busesView = [[BusesViewController alloc] initWithNibName:@"BusesViewController" bundle:nil];
+			BusViewController *busesView = [[BusesViewController alloc] initWithNibName:@"NTU_TVY_Traversity_BusesViewController" bundle:nil];
 			[self.navigationController pushViewController:busesView animated:YES];
 			[busesView release];
 		} else {
 			JONTUBus *bus = [[JONTUBusEngine sharedJONTUBusEngine] busForPlate:[[arrivals objectAtIndex:indexPath.row] valueForKey:@"plate"]];			
-			BusViewController *busView = [[BusViewController alloc] initWithNibName:@"BusViewController" bundle:nil];
+			BusViewController *busView = [[BusViewController alloc] initWithNibName:@"NTU_TVY_Traversity_BusViewController" bundle:nil];
 			busView.bus = bus;
 			busView.stop = stop;
 			[self.navigationController pushViewController:busView animated:YES];
@@ -474,7 +474,6 @@
 		}
 		
 	}
-	 */
 	
 }
 

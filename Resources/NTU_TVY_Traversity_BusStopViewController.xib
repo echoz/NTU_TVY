@@ -189,7 +189,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 			<object class="IBUIBarButtonItem" id="460695273">
 				<object class="NSCustomResource" key="IBUIImage">
 					<string key="NSClassName">NSImage</string>
-					<string key="NSResourceName">alert.png</string>
+					<string key="NSResourceName">NTU_TVY_Traversity_alert.png</string>
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<float key="IBUIWidth">15</float>
@@ -582,7 +582,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">alert.png</string>
+			<string key="NS.key.0">NTU_TVY_Traversity_alert.png</string>
 			<string key="NS.object.0">{15, 12}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">534</string>

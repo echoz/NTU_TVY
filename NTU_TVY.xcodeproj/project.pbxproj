@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		3F875A8E13F4DD5700DFA035 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F875A8D13F4DD5700DFA035 /* CoreLocation.framework */; };
+		3F875AED13F5072700DFA035 /* BusViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F875AE713F5072700DFA035 /* BusViewController.h */; };
+		3F875AEE13F5072700DFA035 /* BusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875AE813F5072700DFA035 /* BusViewController.m */; };
+		3F875AEF13F5072700DFA035 /* NameValueCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F875AEA13F5072700DFA035 /* NameValueCell.h */; };
+		3F875AF013F5072700DFA035 /* NameValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875AEB13F5072700DFA035 /* NameValueCell.m */; };
+		3F875AF613F5072F00DFA035 /* BusAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F875AF213F5072F00DFA035 /* BusAnnotation.h */; };
+		3F875AF713F5072F00DFA035 /* BusAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875AF313F5072F00DFA035 /* BusAnnotation.m */; };
+		3F875AF813F5072F00DFA035 /* StopAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F875AF413F5072F00DFA035 /* StopAnnotation.h */; };
+		3F875AF913F5072F00DFA035 /* StopAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875AF513F5072F00DFA035 /* StopAnnotation.m */; };
+		3F875B0013F5079700DFA035 /* BusesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F875AFD13F5079700DFA035 /* BusesViewController.h */; };
+		3F875B0113F5079700DFA035 /* BusesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875AFE13F5079700DFA035 /* BusesViewController.m */; };
+		3F875B0413F5080000DFA035 /* NSString+StringToUIColorConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F875B0213F507FF00DFA035 /* NSString+StringToUIColorConversion.h */; };
+		3F875B0513F5080000DFA035 /* NSString+StringToUIColorConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B0313F507FF00DFA035 /* NSString+StringToUIColorConversion.m */; };
+		3F875B0713F5083F00DFA035 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F875B0613F5083F00DFA035 /* MapKit.framework */; };
+		3F875B1213F5092B00DFA035 /* InfoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F875B0F13F5092B00DFA035 /* InfoViewController.h */; };
+		3F875B1313F5092B00DFA035 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B1013F5092B00DFA035 /* InfoViewController.m */; };
 		3F912B9713F40BE000853015 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F912B9613F40BE000853015 /* Foundation.framework */; };
 		3F912BBA13F40DE800853015 /* JOIris.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F912BB013F40DE800853015 /* JOIris.h */; };
 		3F912BBB13F40DE800853015 /* JOIris.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F912BB113F40DE800853015 /* JOIris.m */; };
@@ -58,6 +73,29 @@
 		3F875ADD13F5059200DFA035 /* NTU_TVY_Traversity_BusETACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTU_TVY_Traversity_BusETACell.xib; sourceTree = "<group>"; };
 		3F875ADE13F5059200DFA035 /* NTU_TVY_Traversity_BusStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTU_TVY_Traversity_BusStopViewController.xib; sourceTree = "<group>"; };
 		3F875ADF13F5059200DFA035 /* NTU_TVY_Traversity_alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NTU_TVY_Traversity_alert.png; sourceTree = "<group>"; };
+		3F875AE713F5072700DFA035 /* BusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusViewController.h; sourceTree = "<group>"; };
+		3F875AE813F5072700DFA035 /* BusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusViewController.m; sourceTree = "<group>"; };
+		3F875AE913F5072700DFA035 /* NTU_TVY_Traversity_BusViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NTU_TVY_Traversity_BusViewController.xib; path = ../UI/BusView/NTU_TVY_Traversity_BusViewController.xib; sourceTree = "<group>"; };
+		3F875AEA13F5072700DFA035 /* NameValueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameValueCell.h; sourceTree = "<group>"; };
+		3F875AEB13F5072700DFA035 /* NameValueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameValueCell.m; sourceTree = "<group>"; };
+		3F875AEC13F5072700DFA035 /* NTU_TVY_Traversity_NameValueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NTU_TVY_Traversity_NameValueCell.xib; path = ../UI/BusView/NTU_TVY_Traversity_NameValueCell.xib; sourceTree = "<group>"; };
+		3F875AF213F5072F00DFA035 /* BusAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusAnnotation.h; sourceTree = "<group>"; };
+		3F875AF313F5072F00DFA035 /* BusAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusAnnotation.m; sourceTree = "<group>"; };
+		3F875AF413F5072F00DFA035 /* StopAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopAnnotation.h; sourceTree = "<group>"; };
+		3F875AF513F5072F00DFA035 /* StopAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopAnnotation.m; sourceTree = "<group>"; };
+		3F875AFD13F5079700DFA035 /* BusesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusesViewController.h; sourceTree = "<group>"; };
+		3F875AFE13F5079700DFA035 /* BusesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusesViewController.m; sourceTree = "<group>"; };
+		3F875AFF13F5079700DFA035 /* NTU_TVY_Traversity_BusesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NTU_TVY_Traversity_BusesViewController.xib; path = ../UI/BusesView/NTU_TVY_Traversity_BusesViewController.xib; sourceTree = "<group>"; };
+		3F875B0213F507FF00DFA035 /* NSString+StringToUIColorConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringToUIColorConversion.h"; sourceTree = "<group>"; };
+		3F875B0313F507FF00DFA035 /* NSString+StringToUIColorConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringToUIColorConversion.m"; sourceTree = "<group>"; };
+		3F875B0613F5083F00DFA035 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3F875B0F13F5092B00DFA035 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		3F875B1013F5092B00DFA035 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		3F875B1113F5092B00DFA035 /* NTU_TVY_Traversity_InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NTU_TVY_Traversity_InfoViewController.xib; path = ../UI/InfoView/NTU_TVY_Traversity_InfoViewController.xib; sourceTree = "<group>"; };
+		3F875B1613F509D500DFA035 /* NTU_TVY_Traversity_About.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NTU_TVY_Traversity_About.plist; sourceTree = "<group>"; };
+		3F875B1913F50A4000DFA035 /* NTU_TVY_Traversity_57-masked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NTU_TVY_Traversity_57-masked.png"; sourceTree = "<group>"; };
+		3F875B1A13F50A4000DFA035 /* NTU_TVY_Traversity_57-masked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NTU_TVY_Traversity_57-masked@2x.png"; sourceTree = "<group>"; };
+		3F875B1F13F50AAC00DFA035 /* NTU_TVY_Traversity_stop-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NTU_TVY_Traversity_stop-bg.png"; sourceTree = "<group>"; };
 		3F912B9313F40BE000853015 /* libNTU_TVY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNTU_TVY.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F912B9613F40BE000853015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F912BB013F40DE800853015 /* JOIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOIris.h; sourceTree = "<group>"; };
@@ -109,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F875B0713F5083F00DFA035 /* MapKit.framework in Frameworks */,
 				3F875A8E13F4DD5700DFA035 /* CoreLocation.framework in Frameworks */,
 				3F912BF313F4133700853015 /* libicucore.dylib in Frameworks */,
 				3F912BD713F4115700853015 /* UIKit.framework in Frameworks */,
@@ -119,6 +158,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F875AE613F5072700DFA035 /* BusView */ = {
+			isa = PBXGroup;
+			children = (
+				3F875AF113F5072F00DFA035 /* MapAnnotations */,
+				3F875AE713F5072700DFA035 /* BusViewController.h */,
+				3F875AE813F5072700DFA035 /* BusViewController.m */,
+				3F875AEA13F5072700DFA035 /* NameValueCell.h */,
+				3F875AEB13F5072700DFA035 /* NameValueCell.m */,
+			);
+			path = BusView;
+			sourceTree = "<group>";
+		};
+		3F875AF113F5072F00DFA035 /* MapAnnotations */ = {
+			isa = PBXGroup;
+			children = (
+				3F875AF213F5072F00DFA035 /* BusAnnotation.h */,
+				3F875AF313F5072F00DFA035 /* BusAnnotation.m */,
+				3F875AF413F5072F00DFA035 /* StopAnnotation.h */,
+				3F875AF513F5072F00DFA035 /* StopAnnotation.m */,
+			);
+			path = MapAnnotations;
+			sourceTree = "<group>";
+		};
+		3F875AFC13F5078B00DFA035 /* BusesView */ = {
+			isa = PBXGroup;
+			children = (
+				3F875AFD13F5079700DFA035 /* BusesViewController.h */,
+				3F875AFE13F5079700DFA035 /* BusesViewController.m */,
+			);
+			path = BusesView;
+			sourceTree = "<group>";
+		};
+		3F875B0E13F5092B00DFA035 /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				3F875B0F13F5092B00DFA035 /* InfoViewController.h */,
+				3F875B1013F5092B00DFA035 /* InfoViewController.m */,
+			);
+			path = InfoView;
+			sourceTree = "<group>";
+		};
 		3F912B8813F40BE000853015 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +221,7 @@
 		3F912B9513F40BE000853015 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F875B0613F5083F00DFA035 /* MapKit.framework */,
 				3F875A8D13F4DD5700DFA035 /* CoreLocation.framework */,
 				3F912BF213F4133700853015 /* libicucore.dylib */,
 				3F912BD613F4115700853015 /* UIKit.framework */,
@@ -168,6 +249,8 @@
 				3F912BE813F412E500853015 /* RegexKitLite */,
 				3F912C8513F41DDB00853015 /* Friendly.h */,
 				3F912C8613F41DDB00853015 /* Friendly.m */,
+				3F875B0213F507FF00DFA035 /* NSString+StringToUIColorConversion.h */,
+				3F875B0313F507FF00DFA035 /* NSString+StringToUIColorConversion.m */,
 				3F912C8913F41DF400853015 /* NSString+htmlentitiesaddition.h */,
 				3F912C8A13F41DF400853015 /* NSString+htmlentitiesaddition.m */,
 				3F912BE513F412D200853015 /* SynthesizeSingleton.h */,
@@ -179,6 +262,14 @@
 		3F912BA413F40CB400853015 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F875B1F13F50AAC00DFA035 /* NTU_TVY_Traversity_stop-bg.png */,
+				3F875B1913F50A4000DFA035 /* NTU_TVY_Traversity_57-masked.png */,
+				3F875B1A13F50A4000DFA035 /* NTU_TVY_Traversity_57-masked@2x.png */,
+				3F875B1613F509D500DFA035 /* NTU_TVY_Traversity_About.plist */,
+				3F875B1113F5092B00DFA035 /* NTU_TVY_Traversity_InfoViewController.xib */,
+				3F875AEC13F5072700DFA035 /* NTU_TVY_Traversity_NameValueCell.xib */,
+				3F875AFF13F5079700DFA035 /* NTU_TVY_Traversity_BusesViewController.xib */,
+				3F875AE913F5072700DFA035 /* NTU_TVY_Traversity_BusViewController.xib */,
 				3F875ADD13F5059200DFA035 /* NTU_TVY_Traversity_BusETACell.xib */,
 				3F875ADE13F5059200DFA035 /* NTU_TVY_Traversity_BusStopViewController.xib */,
 				3F875ADF13F5059200DFA035 /* NTU_TVY_Traversity_alert.png */,
@@ -225,6 +316,9 @@
 		3F912BF813F4152F00853015 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3F875B0E13F5092B00DFA035 /* InfoView */,
+				3F875AFC13F5078B00DFA035 /* BusesView */,
+				3F875AE613F5072700DFA035 /* BusView */,
 				3F912C5B13F41CA900853015 /* Bus Stop */,
 				3F912BFE13F4156C00853015 /* Stops */,
 			);
@@ -239,7 +333,7 @@
 				3F912BF913F4156600853015 /* StopsTableViewController.h */,
 				3F912BFA13F4156600853015 /* StopsTableViewController.m */,
 			);
-			name = Stops;
+			path = Stops;
 			sourceTree = "<group>";
 		};
 		3F912C5B13F41CA900853015 /* Bus Stop */ = {
@@ -252,7 +346,7 @@
 				3F912C6213F41CB500853015 /* ArrivalsOperation.h */,
 				3F912C6313F41CB500853015 /* ArrivalsOperation.m */,
 			);
-			name = "Bus Stop";
+			path = "Bus Stop";
 			sourceTree = "<group>";
 		};
 		3F912C7413F41D3B00853015 /* UIDevice */ = {
@@ -298,6 +392,13 @@
 				3F912C8413F41D4F00853015 /* wwanconnect.h in Headers */,
 				3F912C8713F41DDB00853015 /* Friendly.h in Headers */,
 				3F912C8B13F41DF500853015 /* NSString+htmlentitiesaddition.h in Headers */,
+				3F875AED13F5072700DFA035 /* BusViewController.h in Headers */,
+				3F875AEF13F5072700DFA035 /* NameValueCell.h in Headers */,
+				3F875AF613F5072F00DFA035 /* BusAnnotation.h in Headers */,
+				3F875AF813F5072F00DFA035 /* StopAnnotation.h in Headers */,
+				3F875B0013F5079700DFA035 /* BusesViewController.h in Headers */,
+				3F875B0413F5080000DFA035 /* NSString+StringToUIColorConversion.h in Headers */,
+				3F875B1213F5092B00DFA035 /* InfoViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +471,13 @@
 				3F912C8313F41D4F00853015 /* wwanconnect.c in Sources */,
 				3F912C8813F41DDB00853015 /* Friendly.m in Sources */,
 				3F912C8C13F41DF500853015 /* NSString+htmlentitiesaddition.m in Sources */,
+				3F875AEE13F5072700DFA035 /* BusViewController.m in Sources */,
+				3F875AF013F5072700DFA035 /* NameValueCell.m in Sources */,
+				3F875AF713F5072F00DFA035 /* BusAnnotation.m in Sources */,
+				3F875AF913F5072F00DFA035 /* StopAnnotation.m in Sources */,
+				3F875B0113F5079700DFA035 /* BusesViewController.m in Sources */,
+				3F875B0513F5080000DFA035 /* NSString+StringToUIColorConversion.m in Sources */,
+				3F875B1313F5092B00DFA035 /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

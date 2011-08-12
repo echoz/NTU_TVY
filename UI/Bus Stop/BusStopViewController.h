@@ -56,7 +56,6 @@
 @property (readwrite) NSUInteger busstopid;
 -(void)updateProgressBar;
 -(IBAction)refresh;
--(IBAction)favorite;
 
 // KVO - array accessors
 - (id)objectInArrivalsAtIndex:(NSUInteger)idx;
