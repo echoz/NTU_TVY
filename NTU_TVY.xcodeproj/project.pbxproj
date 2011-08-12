@@ -55,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		3F875A8D13F4DD5700DFA035 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3F875AD013F4EC0800DFA035 /* NTU_TVY_Traversity_alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NTU_TVY_Traversity_alert.png; sourceTree = "<group>"; };
 		3F912B9313F40BE000853015 /* libNTU_TVY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNTU_TVY.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F912B9613F40BE000853015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F912BB013F40DE800853015 /* JOIris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOIris.h; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		3F912BF213F4133700853015 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		3F912BF913F4156600853015 /* StopsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopsTableViewController.h; sourceTree = "<group>"; };
 		3F912BFA13F4156600853015 /* StopsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopsTableViewController.m; sourceTree = "<group>"; };
-		3F912BFB13F4156600853015 /* StopsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StopsTableViewController.xib; sourceTree = "<group>"; };
 		3F912C1B13F4172000853015 /* CacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheOperation.h; sourceTree = "<group>"; };
 		3F912C1C13F4172000853015 /* CacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheOperation.m; sourceTree = "<group>"; };
 		3F912C5C13F41CB500853015 /* BusStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusStopViewController.h; sourceTree = "<group>"; };
@@ -179,6 +179,7 @@
 		3F912BA413F40CB400853015 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F875AD013F4EC0800DFA035 /* NTU_TVY_Traversity_alert.png */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -235,7 +236,6 @@
 				3F912C1C13F4172000853015 /* CacheOperation.m */,
 				3F912BF913F4156600853015 /* StopsTableViewController.h */,
 				3F912BFA13F4156600853015 /* StopsTableViewController.m */,
-				3F912BFB13F4156600853015 /* StopsTableViewController.xib */,
 			);
 			name = Stops;
 			sourceTree = "<group>";

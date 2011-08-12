@@ -12,6 +12,7 @@
 #import "CacheOperation.h"
 #import "NSString+htmlentitiesaddition.h"
 #import "Friendly.h"
+#import "UIDevice-Reachability.h"
 
 @implementation StopsTableViewController
 @synthesize workQueue;
@@ -39,6 +40,10 @@
 	titleLabel.showsTouchWhenHighlighted = YES;
 	[titleLabel addTarget:self action:@selector(titleTap:) forControlEvents:UIControlEventTouchUpInside];
 	self.navigationItem.titleView = titleLabel;
+    [titleLabel sizeToFit];
+    
+    refreshCache = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshCacheTapped:)];
+    refreshError = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"NTU_TVY_Traversity_alert.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(refreshCacheTapped:)];
 	
 	lastUpdate = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 190, 20)];
 	lastUpdate.backgroundColor = [UIColor clearColor];
@@ -57,7 +62,6 @@
 						 [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease],
 						 nil];
 	
-	self.navigationItem.rightBarButtonItem = refreshCache;
 	workQueue = [[NSOperationQueue alloc] init];
     
     locationManager = [[CLLocationManager alloc] init];
@@ -81,6 +85,8 @@
 }
 
 -(void)dealloc {
+    [refreshError release], refreshError = nil;
+    [refreshCache release], refreshCache = nil;
     [currentLocation release], currentLocation = nil;
     [genericDisplay release], genericDisplay = nil;
     [stops release], stops = nil;
@@ -94,8 +100,6 @@
 
 - (void)viewDidUnload
 {
-    [refreshCache release];
-    refreshCache = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -104,8 +108,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
     [self.navigationController setToolbarHidden:NO animated:YES];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    [self.navigationItem setRightBarButtonItem:refreshCache animated:YES];
 
     if ([locationManager locationServicesEnabled]) {        
         [locationManager performSelector:@selector(stopUpdatingLocation) withObject:nil afterDelay:30];
@@ -169,35 +176,10 @@
             [NSObject cancelPreviousPerformRequestsWithTarget:locationManager selector:@selector(stopUpdatingLocation) object:nil];
         } 
       
-        [self.tableView reloadData];
+        [self cacheRefresh];
     }
     
 #endif
-}
-
--(void)engineStarted {
-	
-	NSLog(@"Fill Cache complete");
-	fillingCache = NO;
-	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-	//	self.navigationItem.rightBarButtonItem = refreshCache;
-	[[JONTUBusEngine sharedJONTUBusEngine] setHoldCache:-1];
-	
-	NSString *matchString = [[NSString alloc] initWithData:[[JONTUBusEngine sharedJONTUBusEngine] indexPageCache] encoding:NSASCIIStringEncoding];
-
-	if ([matchString rangeOfString:@"Database Error"].location != NSNotFound) {
-
-	}
-	
-    [matchString release];
-	[self freshen];
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:0.75];
-	[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-	[self.tableView setAlpha:1];
-	[self.tableView setScrollEnabled:YES];
-	[self.tableView setAllowsSelection:YES];
-	[UIView commitAnimations];	
 }
 
 -(void)titleTap:(id)sender {
@@ -206,14 +188,89 @@
 
 #pragma mark - Data Source stuff
 
+-(void)promptForPossibleError {
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"NTU Web Services" message:@"There is a possiblity that NTU Web Services is down. If you do not see results/data and think that there should be, this is most likely the case. Do a cache refresh when everything is back up." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+}
+
+-(void)reachabilityChanged {
+	self.navigationItem.rightBarButtonItem = refreshError;
+    
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+	[workQueue cancelAllOperations];
+	
+	[self.tableView setAlpha:1];
+	[self.tableView setScrollEnabled:YES];
+	[self.tableView setAllowsSelection:YES];	
+	
+	if (scheduleWatcher) {
+		[[UIDevice currentDevice] unscheduleReachabilityWatcher];
+		scheduleWatcher = NO;
+	}	
+}
+
+-(void)showNetworkErrorAlert {
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Traversity needs an active internet connection to reload the cache." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+	[alert show];
+	[alert release];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+	if ((alertView.title == @"Reload Cache") && ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Yes"])) {
+		
+		if ([[UIDevice currentDevice] hostAvailable:@"campusbus.ntu.edu.sg"]) {
+			NSLog(@"Refreshing Cache");
+			[[JONTUBusEngine sharedJONTUBusEngine] setHoldCache:20];
+			CacheOperation *fillCache = [[CacheOperation alloc] initWithDelegate:self];
+			[self.workQueue addOperation:fillCache];
+			[fillCache release];
+			
+			[[UIDevice currentDevice] scheduleReachabilityWatcher:self];
+			scheduleWatcher = YES;
+            
+			lastUpdate.text = @"Updating cache...";	
+			
+			[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+			[UIView beginAnimations:nil context:nil];
+			[UIView setAnimationDuration:0.75];
+			[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+			[self.tableView setAlpha:0.5];
+			[self.tableView setScrollEnabled:NO];
+			[self.tableView setAllowsSelection:NO];
+			[UIView commitAnimations];		
+			
+		} else {
+			[self showNetworkErrorAlert];
+			[self reachabilityChanged];
+		}
+	}
+}
+
 - (IBAction)refreshCacheTapped:(id)sender {
+	if ([[UIDevice currentDevice] hostAvailable:@"campusbus.ntu.edu.sg"]) 	{
+        
+        self.navigationItem.rightBarButtonItem = refreshCache;
+		
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Reload Cache" 
+														message:@"Are you sure you want to reload the entire Shuttle Bus Database?" 
+													   delegate:self 
+											  cancelButtonTitle:@"No"
+											  otherButtonTitles:@"Yes",nil];
+		[alert setDelegate:self];
+		[alert show];
+		[alert release];
+	} else {
+		[self showNetworkErrorAlert];
+		[self reachabilityChanged];
+	}
 }
 
 -(void)freshen {
 	JONTUBusEngine *engine = [JONTUBusEngine sharedJONTUBusEngine];	
 	[stops release];
 	stops = [[engine stops] mutableCopy];	
-	
+	    
 	NSDateFormatter *f = [[NSDateFormatter alloc] init];
 	[f setDateStyle:NSDateFormatterShortStyle];
 	[f setTimeStyle:NSDateFormatterShortStyle];
@@ -221,7 +278,35 @@
 	lastUpdate.text = [NSString stringWithFormat:@"Last updated: %@", [f stringFromDate:engine.lastGetIndexPage]]; // comment for taking of default images
 	[f release];
 	
-	[self.tableView reloadData];
+    [self cacheRefresh];
+}
+
+NSInteger compareStops(id stop1, id stop2, void *context){
+
+	CLLocation *stop1loc = [[CLLocation alloc] initWithLatitude:[[stop1 lat] doubleValue] longitude:[[stop1 lon] doubleValue]];	
+	CLLocation *stop2loc = [[CLLocation alloc] initWithLatitude:[[stop2 lat] doubleValue] longitude:[[stop2 lon] doubleValue]];
+    
+    NSComparisonResult togo;
+
+    CLLocation *currentLoc = (CLLocation *)context;
+    
+	if ([currentLoc distanceFromLocation:stop1loc] < [currentLoc distanceFromLocation:stop2loc]) {
+		togo = NSOrderedAscending;
+	} else if ([currentLoc distanceFromLocation:stop1loc] > [currentLoc distanceFromLocation:stop2loc]) {
+		togo = NSOrderedDescending;
+	} else {
+		togo = NSOrderedSame;
+	}
+	
+	[stop1loc release];
+	[stop2loc release];
+	return togo;
+
+}
+
+-(void)cacheRefresh {
+    [stops sortUsingFunction:compareStops context:currentLocation];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
