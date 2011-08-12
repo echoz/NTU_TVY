@@ -7,18 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface StopsTableViewController : UITableViewController {
-
+@interface StopsTableViewController : UITableViewController <CLLocationManagerDelegate> {
+    UIBarButtonItem *genericDisplay;
 	UILabel *lastUpdate;
+    IBOutlet UIBarButtonItem *refreshCache;
 	
 	NSMutableArray *stops;
 	
 	BOOL fillingCache;
 
+    CLLocation *currentLocation;
+    CLLocationManager *locationManager;
 	NSOperationQueue *workQueue;
 
 }
 @property (readonly) NSOperationQueue *workQueue;
+- (IBAction)refreshCacheTapped:(id)sender;
 -(void)freshen;
 @end

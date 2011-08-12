@@ -8,7 +8,10 @@
 
 #import "StopsTableViewController.h"
 #import "JONTUBusEngine.h"
+#import "JONTUBusStop.h"
 #import "CacheOperation.h"
+#import "NSString+htmlentitiesaddition.h"
+#import "Friendly.h"
 
 @implementation StopsTableViewController
 @synthesize workQueue;
@@ -45,8 +48,20 @@
 	lastUpdate.shadowOffset = CGSizeMake(0, -1);
 	lastUpdate.font = [UIFont fontWithName:@"Helvetica-Bold" size:12.0];
 	lastUpdate.text = @"";
+    
+    genericDisplay = [[UIBarButtonItem alloc] initWithCustomView:lastUpdate];
 	
+	self.toolbarItems = [NSArray arrayWithObjects:
+						 [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease],
+						 genericDisplay,
+						 [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease],
+						 nil];
+	
+	self.navigationItem.rightBarButtonItem = refreshCache;
 	workQueue = [[NSOperationQueue alloc] init];
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
 	
 	if ([JONTUBusEngine sharedJONTUBusEngine].brandNew) {
 		CacheOperation *fillCache = [[CacheOperation alloc] initWithDelegate:self];
@@ -61,12 +76,26 @@
 		 */		
 		
 	} else {
-		[self freshen];		
+		[self freshen];
 	}
+}
+
+-(void)dealloc {
+    [currentLocation release], currentLocation = nil;
+    [genericDisplay release], genericDisplay = nil;
+    [stops release], stops = nil;
+    [locationManager release], locationManager = nil;
+    [lastUpdate release], lastUpdate = nil;
+    [workQueue release], workQueue = nil;
+    
+    [refreshCache release];
+    [super dealloc];
 }
 
 - (void)viewDidUnload
 {
+    [refreshCache release];
+    refreshCache = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -75,6 +104,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.navigationController setToolbarHidden:NO animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+
+    if ([locationManager locationServicesEnabled]) {        
+        [locationManager performSelector:@selector(stopUpdatingLocation) withObject:nil afterDelay:30];
+        [locationManager startUpdatingLocation];
+
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -90,6 +127,9 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
+    if ([locationManager locationServicesEnabled]) {        
+        [locationManager stopUpdatingLocation];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -100,6 +140,41 @@
 
 #pragma mark - Miscellaeous selectors
 
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+	if ([error code] == kCLErrorDenied) {
+		[locationManager stopUpdatingLocation];
+		NSLog(@"%@", error);
+	}
+	
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+#if TARGET_IPHONE_SIMULATOR
+    [currentLocation release];
+    currentLocation = [[CLLocation alloc] initWithLatitude:1.39949846 longitude:103.74898910];
+#else
+    
+    NSTimeInterval locationAge = -[newLocation.timestamp timeIntervalSinceNow];
+    if (locationAge > 5.0) return;
+    
+    if (newLocation.horizontalAccuracy < 0) return;
+    
+    if ((!currentLocation) || (newLocation.horizontalAccuracy < currentLocation.horizontalAccuracy)) {
+        
+		[currentLocation release];
+		currentLocation = [newLocation copy];
+		
+        if (newLocation.horizontalAccuracy <= locationManager.desiredAccuracy) {
+            [locationManager stopUpdatingLocation];
+            [NSObject cancelPreviousPerformRequestsWithTarget:locationManager selector:@selector(stopUpdatingLocation) object:nil];
+        } 
+      
+        [self.tableView reloadData];
+    }
+    
+#endif
+}
+
 -(void)engineStarted {
 	
 	NSLog(@"Fill Cache complete");
@@ -109,12 +184,12 @@
 	[[JONTUBusEngine sharedJONTUBusEngine] setHoldCache:-1];
 	
 	NSString *matchString = [[NSString alloc] initWithData:[[JONTUBusEngine sharedJONTUBusEngine] indexPageCache] encoding:NSASCIIStringEncoding];
-	/*
+
 	if ([matchString rangeOfString:@"Database Error"].location != NSNotFound) {
-		[self promptForPossibleError];
+
 	}
-	 */
-	[matchString release];
+	
+    [matchString release];
 	[self freshen];
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.75];
@@ -130,6 +205,9 @@
 }
 
 #pragma mark - Data Source stuff
+
+- (IBAction)refreshCacheTapped:(id)sender {
+}
 
 -(void)freshen {
 	JONTUBusEngine *engine = [JONTUBusEngine sharedJONTUBusEngine];	
@@ -158,22 +236,32 @@
 	return [stops count];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50.0;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell...
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-	cell.textLabel.text = [[stops objectAtIndex:indexPath.row] desc];
+    JONTUBusStop *stop = [stops objectAtIndex:indexPath.row];
+    CLLocation *stoploc = [[CLLocation alloc] initWithLatitude:[stop.lat doubleValue] longitude:[stop.lon doubleValue]];
+    
+	cell.textLabel.text = [stop.desc removeHTMLEntities];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"(%@) %@", [Friendly distanceString:[currentLocation distanceFromLocation:stoploc]], [stop.roadName removeHTMLEntities]];
+
+    [stoploc release];
 }
 
 /*
@@ -219,14 +307,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
