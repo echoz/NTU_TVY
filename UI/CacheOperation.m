@@ -28,6 +28,12 @@
 -(void)main {
 	JONTUBusEngine *engine = [JONTUBusEngine sharedJONTUBusEngine];
 	[engine start];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+	NSString *cachePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:CACHE_FILE];
+	
+	[JONTUBusEngine saveState:cachePath];
+
 	if (!cancel)
 		[delegate performSelectorOnMainThread:@selector(engineStarted) withObject:nil waitUntilDone:YES];
 }

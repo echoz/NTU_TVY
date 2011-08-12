@@ -10,8 +10,6 @@
 #import "JONTUBusEngine.h"
 #import "StopsTableViewController.h"
 
-#define CACHE_FILE @"JONTUBusData.stuff"
-
 @implementation NTU_TVY_TraversityDelegate
 @synthesize nav;
 
