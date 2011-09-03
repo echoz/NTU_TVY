@@ -69,8 +69,6 @@
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
 	
-	self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backButtonTapped:)] autorelease];
-	
 	if ([JONTUBusEngine sharedJONTUBusEngine].brandNew) {
 		CacheOperation *fillCache = [[CacheOperation alloc] initWithDelegate:self];
 		[self.workQueue addOperation:fillCache];
@@ -190,10 +188,6 @@
     InfoViewController *modalView = [[InfoViewController alloc] initWithNibName:@"NTU_TVY_Traversity_InfoViewController" bundle:nil];
 	[self presentModalViewController:modalView animated:YES];
 	[modalView release];
-}
-
--(void)backButtonTapped:(id)sender {
-	[self.navigationController dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark - Data Source stuff

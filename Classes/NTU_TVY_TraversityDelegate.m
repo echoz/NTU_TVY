@@ -48,6 +48,8 @@
 	nav = [[UINavigationController alloc] initWithRootViewController:stops];
 	[stops release];
 	
+	addBackToSuiteButton(nav.topViewController);
+	
 }
 
 -(void)applicationWillHide {
