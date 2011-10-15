@@ -455,7 +455,7 @@
      
 	if (indexPath.section == 0) {
 		if ([[arrivals objectAtIndex:indexPath.row] valueForKey:@"err"]) {
-			BusViewController *busesView = [[BusesViewController alloc] initWithNibName:@"NTU_TVY_Traversity_BusesViewController" bundle:nil];
+			BusesViewController *busesView = [[BusesViewController alloc] initWithNibName:@"NTU_TVY_Traversity_BusesViewController" bundle:nil];
 			[self.navigationController pushViewController:busesView animated:YES];
 			[busesView release];
 		} else {
