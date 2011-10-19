@@ -186,7 +186,7 @@
 
 -(void)titleTap:(id)sender {
     InfoViewController *modalView = [[InfoViewController alloc] initWithNibName:@"NTU_TVY_Traversity_InfoViewController" bundle:nil];
-	[self.navigationController presentModalViewController:modalView animated:YES];
+	[self presentModalViewController:modalView animated:YES];
 	[modalView release];
 }
 
