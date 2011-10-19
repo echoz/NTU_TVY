@@ -26,7 +26,7 @@
 
 #define SYNTHESIZE_SINGLETON_FOR_CLASS(__CLASSNAME__)	\
 	\
-static volatile __CLASSNAME__ *shared##__CLASSNAME__ = nil;	\
+static __CLASSNAME__ *shared##__CLASSNAME__ = nil;	\
 	\
 + (__CLASSNAME__ *)shared##__CLASSNAME__##NoSynch	\
 {	\
